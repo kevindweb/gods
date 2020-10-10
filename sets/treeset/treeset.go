@@ -56,10 +56,14 @@ func NewWithStringComparator(values ...interface{}) *Set {
 }
 
 // Add adds the items (one or more) to the set.
-func (set *Set) Add(items ...interface{}) {
+func (set *Set) Add(items ...interface{}) bool {
 	for _, item := range items {
-		set.tree.Put(item, itemExists)
+		if !set.tree.Put(item, itemExists) {
+                        // "duplicate"
+                        return false
+                }
 	}
+        return true
 }
 
 // Remove removes the items (one or more) from the set.
