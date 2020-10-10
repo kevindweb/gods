@@ -66,7 +66,7 @@ func (tree *Tree) Put(key interface{}, value interface{}) bool {
 	var insertedNode *Node
 	if tree.Root == nil {
 		// Assert key is of comparator's type for initial tree
-		tree.Comparator(key, key)
+		// tree.Comparator(key, key)
 		tree.Root = &Node{Key: key, Value: value, color: red}
 		insertedNode = tree.Root
 	} else {
