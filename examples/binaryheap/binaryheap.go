@@ -5,8 +5,8 @@
 package main
 
 import (
-	"github.com/emirpasic/gods/trees/binaryheap"
-	"github.com/emirpasic/gods/utils"
+	"github.com/kevindweb/gods/trees/binaryheap"
+	"github.com/kevindweb/gods/utils"
 )
 
 // BinaryHeapExample to demonstrate basic usage of BinaryHeap

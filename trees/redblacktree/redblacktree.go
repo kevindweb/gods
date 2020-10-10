@@ -13,8 +13,9 @@ package redblacktree
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/trees"
-	"github.com/emirpasic/gods/utils"
+
+	"github.com/kevindweb/gods/trees"
+	"github.com/kevindweb/gods/utils"
 )
 
 func assertTreeImplementation() {
@@ -75,7 +76,7 @@ func (tree *Tree) Put(key interface{}, value interface{}) bool {
 			compare := tree.Comparator(key, node.Key)
 			switch {
 			case compare == 0:
-                                // ignore if node is "equal"
+				// ignore if node is "equal"
 				// node.Key = key
 				// node.Value = value
 				return false
@@ -101,8 +102,8 @@ func (tree *Tree) Put(key interface{}, value interface{}) bool {
 	}
 	tree.insertCase1(insertedNode)
 	tree.size++
-        // return that we added node
-        return true
+	// return that we added node
+	return true
 }
 
 // Get searches the node in the tree by key and returns its value or nil if key is not found in tree.

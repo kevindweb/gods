@@ -11,10 +11,11 @@ package treeset
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/sets"
-	rbt "github.com/emirpasic/gods/trees/redblacktree"
-	"github.com/emirpasic/gods/utils"
 	"strings"
+
+	"github.com/kevindweb/gods/sets"
+	rbt "github.com/kevindweb/gods/trees/redblacktree"
+	"github.com/kevindweb/gods/utils"
 )
 
 func assertSetImplementation() {
@@ -59,11 +60,11 @@ func NewWithStringComparator(values ...interface{}) *Set {
 func (set *Set) Add(items ...interface{}) bool {
 	for _, item := range items {
 		if !set.tree.Put(item, itemExists) {
-                        // "duplicate"
-                        return false
-                }
+			// "duplicate"
+			return false
+		}
 	}
-        return true
+	return true
 }
 
 // Remove removes the items (one or more) from the set.
