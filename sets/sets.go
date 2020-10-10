@@ -13,7 +13,7 @@ import "github.com/emirpasic/gods/containers"
 
 // Set interface that all sets implement
 type Set interface {
-	Add(elements ...interface{})
+	Add(elements ...interface{}) bool
 	Remove(elements ...interface{})
 	Contains(elements ...interface{}) bool
 
